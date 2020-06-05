@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Braizin</title>
+	<link rel="stylesheet" type="text/css" href="braizin.css">
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+
+
+<div class="hero">
+<p>Braizin</p>	
+<h1>COMING SOON</h1>
+
+<hr>
+<p id="launch"></p>
+
+</div>
+
+
+</header>
+
+
+
+</body>
+<script>
+	var countDownDate = new Date ("Sept 4,2020 00:00:00 ").getTime();
+	var x setInterval(function() {
+		var now = new Date ().getTime();
+		var distance = countDownDate - now;
+
+Var days = Math.floor (distance  / (1000 * 60 * 60 * 24));
+Var hours = Math.floor ((distance % (1000 * 60 * 60 *24)) / (1000 * 60 *60 ));
+Var minutes = Math.floor ((distance % (1000 * 60 * 60 )) / (1000 * 60 ));
+Var seconds = Math.floor ((distance % (1000 * 60 )) / 1000);   
+	document.getElementById("launch").innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds +"s";
+	if (distance < 0) { clearInterval(x);
+    document.getElementById("launch").innerHTML="EXPIRED";
+    }
+
+	}, 1000);
+</script>
+</html>
